@@ -1,11 +1,16 @@
+#!/bin/bash
+
+# Script to build files in ./src and append & prepend code to make it work seamlessly in optimizely
+
 for filename in src/*.js; do
-  parcel build $filename --no-minify
+  if test -r src/project-javascript.js; then
+    cp src/project-javascript.js dist/project-javascript.js
+    echo -e '\n\n✅  \033[0;32m"src/project-javascript.js" was copied to "dist/project-javascript.js"\033[0m'
+  else
+    parcel build $filename --no-minify
+  fi
 done
 
-if test -r src/project-javascript.js; then
-  cp src/project-javascript.js dist/project-javascript.js
-  echo -e '\n\n✅  \033[0;32m"src/project-javascript.js" was copied to "dist/project-javascript.js"\033[0m'
-fi
 
 echo -n -e "Getting things ready for optimizely ."
 for bundled in dist/*.js;do

@@ -1,3 +1,7 @@
+#!/bin/bash
+
+# Script to build files in ./src and append & prepend code to make it work seamlessly in optimizely
+
 for filename in src/*.ts; do
   parcel build $filename --no-minify
 done

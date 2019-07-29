@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Transpiles and minifies files in ./src, adds an es6 only condition and creates a global variable with the file's name
 
 echo -e '\n\n👀  \033[0;32mStarting build process ...\033[0m'
