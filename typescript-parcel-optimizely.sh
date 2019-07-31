@@ -31,7 +31,7 @@ for bundled in dist/*.js;do
   else window.Promise = window.Promise || {};
 
   jQuery(document).on('perso_utils_loaded', function (ev, data) {
-    if (data === 'true') {
+    if (data === true) {
 " | cat - $bundled > /tmp/out && mv /tmp/out $bundled
     sleep 0.05
     echo -ne "\b. ."
