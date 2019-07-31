@@ -1,5 +1,7 @@
 # build-scripts-bash
-Collection of bash scripts for building js/ts with different builders/transpilers/minifiers, for use in the browser or in specific web platforms
+Collection of bash scripts for building js/ts with different builders/transpilers/minifiers, for use in the browser or in specific web platforms.
+
+All scripts assume a project structure with source files in `./src` and built files in `./dist` .
 
 ---
 
